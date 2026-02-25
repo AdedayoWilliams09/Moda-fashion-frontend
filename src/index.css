@@ -1,0 +1,32 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap'); */
+
+/* import tailwindcss- this gives us all the utility classes */
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+ /* custom theme configuration */
+ @theme {
+  /* define our custom colors - like picking colors for our paint pallette */
+  --colors-primary: #000000;
+  --colors-secondary: #ffffff;
+  --colors-accent: #7c3aed; 
+
+  /* font families - these are like choosing different handwriting styles */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+ }
+
+ /* dark mode styles - when user switches to night mode  */
+ .dark{
+  --color-primary: #ffffff;
+  --color-secondary: #000000;
+ }
+
+ /* base styles that apply to everything */
+ body {
+  font-family: var(--font-sans); /* use our custom font */
+  transition: background-color 0.3s, ease, color 0.3s ease; /* smooth transition for theme changes */
+ }
