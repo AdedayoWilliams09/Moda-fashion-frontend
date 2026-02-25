@@ -45,3 +45,28 @@ VITE_API_URL=http://localhost:5000/api
 
 ## Deployment
 The frontend is deployed on Vercel/Netlify. Build command: `npm run build`, Output directory: `dist`
+
+1. **Push code to GitHub**
+```bash
+git init
+git add .
+git commit -m "Phase 1 complete: Global layout and theming"
+git branch -M main
+git remote add origin https://github.com/yourusername/moda-fashion.git
+git push -u origin main
+
+2. Deploy to Vercel
+
+Go to https://vercel.com
+
+Import your GitHub repository
+
+Root Directory: frontend
+
+Build Command: npm run build
+
+Output Directory: dist
+
+Add environment variable: VITE_API_URL=https://your-backend-url.onrender.com/api
+
+3. Deploy - Click "Deploy"
